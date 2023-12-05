@@ -1,0 +1,80 @@
+//
+// This is the test data file for testing the "TestSuite class".  Refer to the
+// documentation in testtestsuite.cpp for complete details.
+//
+
+:basicRead
+//
+// <unsigned int first> <unsigned int second>
+//
+1 1
+2 2
+3 3
+4 4
+
+:unregistered -- expect a log entry
+//
+// <doesn't matter>
+//
+// This test should not be registered; it's included here to make sure that a
+// "TestSuite" object can cope with an unregistered test.
+//
+1
+2
+3
+4
+5
+
+:stringPulling
+//
+// <unsigned int stringSelector> <quoted stringText>
+//
+0 "No escape characters."
+1 "Escaped letters:  \a \b \f \n \r \t \v"
+2 "Hex chars:  \x05 \x65 \xBC"
+3 "Octal chars:  \007 \111 \247 \248"
+4 "Escaped symbols:  \' \" \\"
+
+:testTestName
+//
+// "testTestName"
+//
+"testTestName"
+
+:testTestCaseNum
+//
+// <unsigned int testCaseNum>
+//
+1
+2
+3
+4
+5
+6
+
+:testTestResult
+//
+// <quoted testResult> <bool testCaseShouldBeApplied>
+//
+"pass"          1
+"fail"          1
+"abortThisTest" 1
+"abortAllTests" 0
+
+:testTestResult
+//
+// <quoted testResult> <bool testCaseShouldBeApplied>
+//
+"abortAllTests" 1
+"pass"          0
+"fail"          0
+"abortAllTests" 0
+
+:testTestResult
+//
+// <quoted testResult> <bool testCaseShouldBeApplied>
+//
+"pass"          0
+"fail"          0
+"abortThisTest" 0
+"abortAllTests" 0
