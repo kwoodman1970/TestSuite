@@ -16,7 +16,7 @@ My employer at the time opted not to make use of what I'd proposed, so I continu
 
 Use the green `<> Code` button to either clone this repository or download the zip file.
 
-To install, first copy the contents of the `src/headers` directory to a directory for 3<sup>rd</sup>-party standard header files.
+To install, first copy the contents of the `src/headers` directory to to a directory for your compiler's 3<sup>rd</sup>-party standard header files.
 
 Next, compile and link the contents of the  `src/code` directory into `testsuite.lib` and place it in a directory for 3<sup>rd</sup>-party library files.
 
@@ -28,7 +28,7 @@ Each compiler is different &ndash; refer to your compiler's manual for more info
 
 *All source files are (almost) fully documented &ndash; what follows is a summary.*
 
-Generally speaking, place the following directive in your test code source files **after** all `#include` directives for standard C/C++ header files:
+Generally speaking, as per Best Practices, place the following directive in your source file(s) somewhere after all standard C/C++ library header files and before all project header files:
 
 ```c
 #include <testsuite.h>
@@ -126,7 +126,7 @@ A leading colon denotes the start of a block of test cases and each `<test name>
 
 `src/example/testtestsuite.cpp` will test TestSuite &ndash; how meta is that?
 
-It requires my [Platform](https://github.com/kwoodman1970/Platform) module plus a special class that safely shifts strings from an `istream` into a `char[]` array which, unfortunately, has been lost to a file system failure (but may be in an old backup somewhere), so it's not possible to compile & execute it at this time.
+It requires my [Platform](https://github.com/kwoodman1970/Platform) library plus a special class that safely shifts strings from an `istream` into a `char[]` array which, unfortunately, has been lost to a file system failure (but may be in an old backup somewhere).  It's therefore not possible to compile & execute this program at this time.
 
 ## TODO
 
